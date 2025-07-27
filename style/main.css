@@ -1,0 +1,483 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  margin-top: 30px;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header .navbar .cart {
+  display: flex;
+  gap: 10px;
+}
+.header .navbar-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  margin-top: 20px;
+}
+.header .navbar-bottom a {
+  color: rgb(114, 110, 141);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  transition: all 0.2s linear;
+}
+.header .navbar-bottom a:hover {
+  color: rgb(26, 26, 26);
+}
+
+.hero {
+  width: 100%;
+  margin-top: 30px;
+}
+.hero .hero-img {
+  position: relative;
+}
+.hero .hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero .hero-img .white-box {
+  position: absolute;
+  width: 50%;
+  background-color: white;
+  z-index: 1;
+  left: 70%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero .hero-img .white-box .class-p {
+  font-family: "Sora", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  padding: 32px 40px 0;
+}
+.hero .hero-img .white-box .class-span {
+  font-family: "Satoshi", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 8px 40px;
+}
+.hero .hero-img .white-box .view-btn {
+  padding: 24px 40px;
+}
+.hero .hero-img .white-box .view-btn button {
+  padding: 16px 32px;
+  border: none;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  background-color: rgb(249, 249, 249);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.hero .hero-img .white-box .view-btn button:hover {
+  background-color: gray;
+  color: rgb(249, 249, 249);
+}
+
+@media (max-width: 768px) {
+  .hero .hero-img .white-box {
+    width: 90%;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+  }
+  .class-p {
+    font-size: 24px;
+    padding: 24px;
+  }
+  .class-span {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+  .view-btn {
+    padding: 20px 24px;
+  }
+}
+.brand {
+  width: 100%;
+  margin-top: 70px;
+}
+.brand .brand-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .brand-title h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 28px;
+  line-height: 140%;
+  font-weight: 300;
+}
+.brand .brand-box-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  gap: 30px;
+  margin-top: 30px;
+  font-family: "Satoshi", sans-serif;
+}
+.brand .brand-box-wrap .brand-box-1 {
+  width: 305px;
+  height: 244px;
+  background-color: rgb(249, 249, 249);
+  padding: 48px;
+  transition: all 0.2s linear;
+}
+.brand .brand-box-wrap .brand-box-1:hover {
+  transform: scale(1.02);
+}
+.brand .brand-box-wrap .brand-box-1 p {
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.brand .brand-box-wrap .brand-box-1 span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.collection {
+  width: 100%;
+  margin-top: 100px;
+}
+.collection .collection-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  gap: 20px;
+  position: relative;
+}
+.collection .collection-wrap .collection-box-1 {
+  background-image: url(/img/collection-1.svg);
+  width: 305px;
+  height: 375px;
+  transition: all 0.2s linear;
+}
+.collection .collection-wrap .collection-box-1:hover {
+  transform: scale(1.02);
+}
+.collection .collection-wrap .collection-box-2 {
+  background-image: url(/img/collection-2.svg);
+  width: 305px;
+  height: 375px;
+  transition: all 0.2s linear;
+}
+.collection .collection-wrap .collection-box-2:hover {
+  transform: scale(1.02);
+}
+.collection .collection-wrap .collection-box-3 {
+  background-image: url(/img/collection-3.svg);
+  width: 305px;
+  height: 375px;
+  transition: all 0.2s linear;
+}
+.collection .collection-wrap .collection-box-3:hover {
+  transform: scale(1.02);
+}
+.collection .collection-wrap .collection-box-4 {
+  background-image: url(/img/collection-4.svg);
+  width: 305px;
+  height: 375px;
+  transition: all 0.2s linear;
+}
+.collection .collection-wrap .collection-box-4:hover {
+  transform: scale(1.02);
+}
+.collection .collection-wrap .collection-text {
+  flex-direction: column;
+  position: absolute;
+  top: 390px;
+}
+.collection .collection-wrap .collection-text p {
+  font-size: 18px;
+  font-family: "Satoshi", sans-serif;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.collection .collection-wrap .collection-text span {
+  font-size: 16px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 300;
+}
+.collection .collection-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.collection .collection-btn button {
+  padding: 16px 32px;
+  border: none;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  background-color: rgb(249, 249, 249);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.collection .collection-btn button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.idea {
+  width: 100%;
+  margin-top: 100px;
+}
+.idea .idea-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  height: 478px;
+}
+.idea .idea-wrap .idea-box-1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(42, 37, 75);
+  padding: 80px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.idea .idea-wrap .idea-box-1 .idea-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.idea .idea-wrap .idea-box-1 .idea-title p {
+  font-size: 32px;
+  font-family: "Satoshi", sans-serif;
+}
+.idea .idea-wrap .idea-box-1 .idea-span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.idea .idea-wrap .idea-box-1 .idea-span p {
+  font-size: 20px;
+  text-align: start;
+  font-family: "Satoshi", sans-serif;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.idea .idea-wrap .idea-box-1 .idea-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.idea .idea-wrap .idea-box-1 .idea-btn button {
+  margin-top: 150px;
+  padding: 16px 32px;
+  border: none;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  transition: all 0.2s linear;
+  background: rgba(249, 249, 249, 0.15);
+  color: white;
+  cursor: pointer;
+}
+.idea .idea-wrap .idea-box-1 .idea-btn button:hover {
+  background: rgba(249, 249, 249, 0.322);
+  color: white;
+  transform: scale(1.02);
+}
+.idea .idea-wrap .idea-box-2 {
+  background-image: url("/img/idea-box.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.join {
+  width: 100%;
+  margin-top: 80px;
+}
+.join .main-bg-img {
+  width: 100%;
+  min-height: 400px;
+  background-image: url("/img/join-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: white;
+}
+.join .main-bg-img .join-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join .main-bg-img .join-title p {
+  font-family: "Sora", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+.join .main-bg-img .join-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join .main-bg-img .join-name p {
+  font-family: "Satoshi", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  max-width: 700px;
+  text-align: center;
+}
+.join .main-bg-img .benefit-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.join .main-bg-img .benefit-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Satoshi", sans-serif;
+  gap: 10px;
+}
+.join .main-bg-img .benefit-item img {
+  filter: brightness(0) invert(1);
+  width: 16px;
+  height: 16px;
+}
+.join .main-bg-img .email-input {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join .main-bg-img .email-input .input-self {
+  display: flex;
+}
+.join .main-bg-img .email-input .input-self input {
+  width: 354px;
+  height: 56px;
+  padding: 0 25px;
+  border: 2px solid rgb(42, 37, 75);
+}
+.join .main-bg-img .email-input .input-self button {
+  width: 150px;
+  height: 56px;
+  border: 2px solid rgb(42, 37, 75);
+  background-color: rgb(42, 37, 75);
+  color: white;
+  cursor: pointer;
+  font-family: "Satoshi", sans-serif;
+  font-size: 18px;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(42, 37, 75);
+}
+.footer .footer-nav-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  justify-self: flex-start;
+  align-self: center;
+  gap: 133px;
+  padding: 0 0 40px;
+}
+.footer .footer-nav-wrap .footer-nav-1 {
+  display: grid;
+  justify-self: flex-start;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 50px;
+  font-family: "Satoshi", sans-serif;
+  gap: 12px;
+}
+.footer .footer-nav-wrap .footer-nav-1 a {
+  color: white;
+  font-size: 16px;
+  transition: all 0.2s linear;
+}
+.footer .footer-nav-wrap .footer-nav-1 a:hover {
+  transform: scale(1.01);
+  color: gray;
+}
+.footer .footer-nav-wrap .footer-nav-1 a:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer .footer-nav-wrap .footer-nav-1 .input-self {
+  display: flex;
+}
+.footer .footer-nav-wrap .footer-nav-1 .input-self input {
+  width: 354px;
+  height: 56px;
+  padding: 0 25px;
+  border: 2px solid rgb(42, 37, 75);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.footer .footer-nav-wrap .footer-nav-1 .input-self button {
+  width: 150px;
+  height: 56px;
+  border: 2px solid rgb(42, 37, 75);
+  background-color: white;
+  color: rgb(42, 37, 75);
+  cursor: pointer;
+  font-family: "Satoshi", sans-serif;
+  font-size: 18px;
+}
+.footer .footer-bottom {
+  border-top: 2px solid rgb(78, 77, 147);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer .footer-bottom .footer-p {
+  font-family: "Satoshi", sans-serif;
+}
+.footer .footer-bottom .footer-p p {
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+}
+.footer .footer-bottom .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}/*# sourceMappingURL=main.css.map */

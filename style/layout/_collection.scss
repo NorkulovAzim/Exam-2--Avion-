@@ -1,0 +1,102 @@
+.collection {
+    width: 100%;
+    margin-top: 100px;
+
+    .collection-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include flex-center-grid;
+        gap: 20px;
+        position: relative;
+
+        .collection-box-1 {
+            background-image: url(/img/collection-1.svg);
+            width: 305px;
+            height: 375px;
+            transition: all 0.2s linear;
+
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .collection-box-2 {
+            background-image: url(/img/collection-2.svg);
+            width: 305px;
+            height: 375px;
+            transition: all 0.2s linear;
+
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .collection-box-3 {
+            background-image: url(/img/collection-3.svg);
+            width: 305px;
+            height: 375px;
+            transition: all 0.2s linear;
+
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .collection-box-4 {
+            background-image: url(/img/collection-4.svg);
+            width: 305px;
+            height: 375px;
+            transition: all 0.2s linear;
+
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .collection-text {
+            flex-direction: column;
+            position: absolute;
+            top: 390px;
+
+            p {
+                font-size: 18px;
+                font-family: $font-satoshi;
+                margin-bottom: 8px;
+                font-weight: 400;
+            }
+
+            span {
+                font-size: 16px;
+                font-family: $font-satoshi;
+                font-weight: 300;
+            }
+        }
+
+    }
+
+
+    .collection-btn {
+        @include flex-center;
+        margin-top: 100px;
+
+
+        button {
+            padding: 16px 32px;
+            border: none;
+            font-family: $font-satoshi;
+            font-size: 16px;
+            background-color: $bg-color-light;
+            transition: all 0.2s linear;
+            cursor: pointer;
+
+            &:hover {
+                background-color: gray;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.join {
+    width: 100%;
+    margin-top: 80px;
+
+    .main-bg-img {
+        width: 100%;
+        min-height: 400px;
+        background-image: url('/img/join-bg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px 20px;
+        color: white;
+
+        .join-title {
+            @include flex-center;
+        }
+
+
+        .join-title p {
+            font-family: $font-sora;
+            font-size: 40px;
+            font-weight: 300;
+            margin-bottom: 16px;
+            margin-top: 20px;
+        }
+
+        .join-name {
+            @include flex-center;
+        }
+
+
+        .join-name p {
+            font-family: $font-satoshi;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .benefit-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: $font-satoshi;
+            gap: 10px;
+
+
+            img {
+                filter: brightness(0) invert(1);
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .email-input {
+            margin-top: 20px;
+            @include flex-center;
+
+            .input-self {
+                display: flex;
+
+                input {
+                    width: 354px;
+                    height: 56px;
+                    padding: 0 25px;
+                    border: 2px solid rgba(42, 37, 75, 1);
+                }
+
+                button {
+                    width: 150px;
+                    height: 56px;
+                    border: 2px solid rgba(42, 37, 75, 1);
+                    background-color: rgba(42, 37, 75, 1);
+                    color: white;
+                    cursor: pointer;
+                    font-family: $font-satoshi;
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+}
