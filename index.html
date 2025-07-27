@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Avion</title>
 
 </head>
@@ -22,7 +24,6 @@
                 <div class="logo">
                     <a href="./index.html">
                         <img src="./img/Avion-logo.svg" alt="">
-
                     </a>
                 </div>
 
@@ -33,13 +34,13 @@
             </div>
 
             <div class="navbar-bottom">
-                <a href="">Plant pots</a>
-                <a href="">Ceramics</a>
-                <a href="">Tables</a>
-                <a href="">Chairs</a>
-                <a href="">Crockery</a>
-                <a href="">Tableware</a>
-                <a href="">Footer</a>
+                <a href="#plant-pots">Plant pots</a>
+                <a href="#ceramics">Ceramics</a>
+                <a href="#tables">Tables</a>
+                <a href="#chairs">Chairs</a>
+                <a href="#crockery">Crockery</a>
+                <a href="#tableware">Tableware</a>
+                <a href="#tableware">Footer</a>
             </div>
         </div>
     </header>
@@ -49,7 +50,7 @@
         <div class="container">
 
 
-            <div class="hero-img">
+            <div class="hero-img" data-aos="fade-up" data-aos-duration="3000">
                 <img src="./img/hero (1).jpg" alt="">
                 <div class="white-box">
                     <div class="class-p">
@@ -73,11 +74,11 @@
 
     <section class="brand" id="ceramics">
         <div class="container">
-            <div class="brand-title">
+            <div class="brand-title" class="hero-img" data-aos="fade-up" data-aos-duration="3000">
                 <h2>What makes our brand different</h2>
             </div>
 
-            <div class="brand-box-wrap">
+            <div class="brand-box-wrap" data-aos="fade-up" data-aos-duration="3000">
                 <div class="brand-box-1">
                     <img src="./img/Delivery.svg" alt="">
                     <p>Next day as standard</p>
@@ -106,7 +107,7 @@
 
     <section class="collection" id="tables">
         <div class="container">
-            <div class="collection-wrap">
+            <div class="collection-wrap" data-aos="fade-up" data-aos-duration="3000">
                 <div class="collection-box-1">
                     <div class="collection-text">
                         <p>The Dandy chair</p>
@@ -133,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="collection-btn">
+            <div class="collection-btn" data-aos="fade-up" data-aos-duration="3000">
                 <button>View collection</button>
             </div>
         </div>
@@ -143,7 +144,7 @@
 
     <section class="idea" id="chairs">
         <div class="container">
-            <div class="idea-wrap">
+            <div class="idea-wrap" data-aos="fade-up" data-aos-duration="3000">
                 <div class="idea-box-1">
                     <div class="idea-title">
                         <p>It started with a small idea</p>
@@ -169,34 +170,41 @@
     <section class="join" id="crockery">
         <div class="main-bg-img">
             <div class="container">
-                <div class="join-title">
+                <div class="join-title" data-aos="fade-up" data-aos-duration="3000">
                     <p>Join the club and get the benefits</p>
                 </div>
 
-                <div class="join-name">
+                <div class="join-name" data-aos="fade-up" data-aos-duration="3000">
                     <p>Sign up for our newsletter and receive exclusive offers on <br> new ranges, sales, pop-up stores
                         and
                         more</p>
                 </div>
 
-                <div class="benefit-list">
+                <div class="benefit-list" data-aos="fade-up" data-aos-duration="3000">
                     <div class="benefit-item">
-                        <img src="./img/check-mark.png" alt="">
-                        <span class="text">Exclusive offers</span>
+                        <label class="container">
+                            <input checked="checked" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>                        <span class="text">Exclusive offers</span>
                     </div>
                     <div class="benefit-item">
-                        <img src="./img/check-mark.png" alt="">
-                        <span class="text">Free events</span>
+                        <label class="container">
+                            <input checked="checked" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>                        <span class="text">Free events</span>
                     </div>
                     <div class="benefit-item">
-                        <img src="./img/check-mark.png" alt="">
+                        <label class="container">
+                            <input checked="checked" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>
                         <span class="text">Large discounts</span>
                     </div>
                 </div>
             </div>
 
 
-            <div class="email-input">
+            <div class="email-input" data-aos="fade-up" data-aos-duration="3000">
                 <div class="input-self">
                     <input type="text" placeholder="your@email.com">
                     <button>Sign up</button>
@@ -207,7 +215,7 @@
 
 
 
-    <footer class="footer" id="tableware"> 
+    <footer class="footer" id="tableware">
         <div class="container">
             <div class="footer-nav-wrap">
                 <div class="footer-nav-1">
@@ -273,6 +281,35 @@
         </div>
     </footer>
 
+
+
+    <button id="backToTop" title="Go to top">↑</button>
+
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>

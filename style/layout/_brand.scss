@@ -1,55 +1,84 @@
 .brand {
     width: 100%;
     margin-top: 70px;
-
-
+  
     .brand-title {
+      @include flex-center;
+  
+      h2 {
+        font-family: $font-sora;
+        font-size: 28px;
+        line-height: 140%;
+        font-weight: 300;
+        text-align: center;
+  
+        @media (max-width: 1024px) {
+          font-size: 26px;
+        }
+  
+        @media (max-width: 500px) {
+          font-size: 22px;
+        }
+      }
+  
+      @media (max-width: 1024px) {
         @include flex-center;
-
-        h2 {
-            font-family: $font-sora;
-            font-size: 28px;
-            line-height: 140%;
-            font-weight: 300;
-        }
+      }
+  
+      @media (max-width: 500px) {
+        @include flex-center;
+      }
     }
-
-
+  
     .brand-box-wrap {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        position: relative;
-
-        @include flex-center-grid;
-        gap: 30px;
-        margin-top: 30px;
-        font-family: $font-satoshi;
-
-
-        .brand-box-1 {
-            width: 305px;
-            height: 244px;
-            background-color: $bg-color-light;
-            padding: 48px;
-            transition: all 0.2s linear;
-
-            &:hover {
-                transform: scale(1.02);
-            }
-
-            p {
-                padding: 20px 0;
-                font-size: 20px;
-                font-weight: 400;
-            }
-
-            span {
-                font-size: 16px;
-                font-weight: 300;
-                line-height: 150%;
-            }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 30px;
+      font-family: $font-satoshi;
+      justify-items: center;
+  
+      .brand-box-1 {
+        width: 305px;
+        height: 244px;
+        background-color: $bg-color-light;
+        padding: 48px;
+        transition: all 0.2s linear;
+  
+        &:hover {
+          transform: scale(1.02);
         }
+  
+        p {
+          padding: 20px 0;
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+        }
+  
+        span {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 150%;
+          text-align: center;
+          display: block;
+        }
+      }
+  
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+  
+        .brand-box-1 {
+          width: 100%;
+          max-width: 305px;
+          margin: 0 auto;
+          padding: 32px;
+        }
+      }
     }
-
-
-}
+  }
+  

@@ -61,25 +61,56 @@
     }
 }
 
-@media (max-width: 768px) {
-    .hero .hero-img .white-box {
-        width: 90%;
-        left: 50%;
-        bottom: 5%;
-        transform: translateX(-50%);
-    }
+@media (max-width: 500px) {
+    .hero {
+        margin-top: 0;
 
-    .class-p {
-        font-size: 24px;
-        padding: 24px;
-    }
+        .hero-img {
+            display: flex;
+            flex-direction: column-reverse;             
 
-    .class-span {
-        font-size: 16px;
-        padding: 10px 24px;
-    }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
 
-    .view-btn {
-        padding: 20px 24px;
+            .white-box {
+                position: static;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                transform: none;
+                padding: 32px 16px;
+                align-items: center;
+                text-align: center;
+                margin-top: 50px;
+
+                .class-p {
+                    font-size: 22px;
+                    line-height: 1.4;
+                    padding: 0 0 12px 0;
+                }
+
+                .class-span {
+                    font-size: 16px;
+                    padding: 0 0 24px 0;
+                }
+
+                .view-btn {
+                    padding: 0;
+
+                    button {
+                        width: 400px;
+                        padding: 16px 0;
+                        background-color: #f6f6f6;
+                        color: #1b1b1b;
+                        border: none;
+                        font-size: 16px;
+                        font-family: $font-satoshi;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
     }
 }

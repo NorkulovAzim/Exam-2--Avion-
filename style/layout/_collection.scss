@@ -76,6 +76,26 @@
             }
         }
 
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+
+            p, span {
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+
+            .collection-box-1 {
+                width: 100%;
+                max-width: 305px;
+                margin: 0 auto;
+                padding: 32px;
+            }
+        }
+
     }
 
 
